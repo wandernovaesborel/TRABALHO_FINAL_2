@@ -1,0 +1,239 @@
+/* Reset e Variáveis de Cor */
+:root {
+  --primary: #F27329;
+  --secondary: #543A8C;
+  --light: #F2F2F2;
+  --accent: #F29057;
+  --accent-light: #9988BF;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-color: var(--light);
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+/* Cabeçalho */
+header {
+  background-color: var(--secondary);
+  padding: 15px 0;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
+.logo img {
+  height: 40px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li a {
+  color: var(--light);
+  text-decoration: none;
+  padding: 10px 15px;
+  transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: var(--accent-light);
+  border-radius: 4px;
+}
+
+/* Menu Mobile */
+#btn-mobile {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--light);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Seção Herói */
+.hero {
+  padding: 100px 0 50px;
+  background: linear-gradient(135deg, var(--accent), var(--primary));
+  color: var(--light);
+}
+
+.hero .container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.hero-image {
+  flex: 1;
+}
+
+.hero-image img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Botões */
+.btn {
+  display: inline-block;
+  background-color: var(--secondary);
+  color: var(--light);
+  padding: 12px 25px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: var(--accent-light);
+}
+
+/* Seção Recursos */
+.features {
+  padding: 80px 0;
+  background-color: var(--light);
+}
+
+.features h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: var(--secondary);
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.feature {
+  background-color: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.feature img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 15px;
+}
+
+.feature h3 {
+  color: var(--secondary);
+  margin-bottom: 10px;
+}
+
+/* Seção Depoimentos */
+.testimonials {
+  padding: 80px 0;
+  background-color: var(--secondary);
+  color: var(--light);
+  text-align: center;
+}
+
+.testimonial p {
+  font-style: italic;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+/* Seção CTA */
+.cta {
+  padding: 80px 0;
+  text-align: center;
+  background-color: var(--primary);
+  color: var(--light);
+}
+
+.cta .btn {
+  background-color: var(--secondary);
+}
+
+/* Rodapé */
+footer {
+  background-color: var(--secondary);
+  color: var(--light);
+  padding: 30px 0;
+  text-align: center;
+}
+
+.footer-links {
+  margin-bottom: 20px;
+}
+
+.footer-links a {
+  color: var(--light);
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.social-links a {
+  color: var(--light);
+  font-size: 1.5rem;
+  margin: 0 10px;
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: var(--accent);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .hero .container {
+    flex-direction: column;
+  }
+
+  #btn-mobile {
+    display: block;
+  }
+
+  nav ul {
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 70px;
+    left: 0;
+    background-color: var(--secondary);
+    flex-direction: column;
+    padding: 20px 0;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  nav ul li a {
+    display: block;
+    text-align: center;
+  }
+}
