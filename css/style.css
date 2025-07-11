@@ -69,7 +69,7 @@ nav ul li a:hover {
 
 /* Seção Herói */
 .hero {
-  padding: 100px 0 50px;
+  padding: 100px 0 10px;
   background: linear-gradient(135deg, var(--accent), var(--primary));
   color: var(--light);
 }
@@ -80,24 +80,11 @@ nav ul li a:hover {
   gap: 40px;
 }
 
-.hero-text {
-  flex: 1;
-}
-
 .hero-text h1 {
   font-size: 2.5rem;
   margin-bottom: 20px;
 }
 
-.hero-image {
-  flex: 1;
-}
-
-.hero-image img {
-  width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
 
 /* Botões */
 .btn {
@@ -142,8 +129,7 @@ nav ul li a:hover {
 }
 
 .feature img {
-  width: 80px;
-  height: 80px;
+  width: 40%;
   margin-bottom: 15px;
 }
 
